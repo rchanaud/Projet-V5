@@ -2,3 +2,12 @@ html, body {
 	height: 100%;
 }
 
+.show {
+	-webkit-transition: opacity 0.5s;
+	opacity: 1;
+}
+
+.hide {
+	-webkit-transition: opacity 0.5s;
+	opacity: 0;
+}

@@ -1,16 +1,16 @@
 #accueil
 {
-	overflow: auto;
 	width: 100%;
 	height: 100%;
-	background: url("../img/background-accueil.jpg") no-repeat center center fixed;
-	background-size: cover;
+	position: relative;
+	background-color: #f7f7f7;
 }
 
 #center-presentation
 {
 	margin: 0 auto;
 	width: 295px;
+	position: absolute;
 	text-align: center;
 
 	span
@@ -68,7 +68,8 @@
 		    transition: border-color .15s ease-in-out;
 		}
 
-		&:hover {
+		&:hover
+		{
 			color: #AAA;
 			transition: color .15s ease-in-out;
 
@@ -79,4 +80,9 @@
 			}
 		}
 	}
+}
+
+.svg-shape
+{
+	position: absolute;
 }
