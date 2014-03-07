@@ -3,7 +3,8 @@
 
 //Fonts
 @import "fonts";
-p, span, a { font-family: "fira_sans"; font-size: 20px; }
+$fira: "fira_sans", sans-serif;
+p, span, a { font-family: $fira; font-size: 20px; }
 
 //Vars
 $black1: #1a1a1a;

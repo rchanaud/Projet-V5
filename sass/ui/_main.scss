@@ -2,6 +2,8 @@ html, body {
 	height: 100%;
 }
 
+a { text-decoration: none; }
+
 .show {
 	-webkit-transition: opacity 0.5s;
 	opacity: 1;
@@ -10,4 +12,12 @@ html, body {
 .hide {
 	-webkit-transition: opacity 0.5s;
 	opacity: 0;
+}
+
+.content-zone {
+	width: 100%;
+	&:nth-of-type(2){ background-color: rgba(0, 0, 0, .3); }
+	&:nth-of-type(3){ background-color: rgba(0, 0, 0, .1); }
+	&:nth-of-type(4){ background-color: rgba(0, 0, 0, .4); }
+	&:nth-of-type(5){ background-color: rgba(0, 0, 0, .2); }
 }
