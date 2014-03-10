@@ -25,25 +25,51 @@
 
         <!-- MENU -->
         <a id="reveal-menu" href="#">
-            <svg id="menu-ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+            <svg id="menu-ico" class="shown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
                 <g stroke="#1a1a1a" stroke-linecap="square">
                     <path d="M0.5,1.5 L20.5,1.5"   ></path>
                     <path d="M0.5,11.5 L20.5,11.5" ></path>
                     <path d="M0.5,21.5 L20.5,21.5" ></path>
                 </g>
             </svg>
+            <svg id="menu-close-ico" class="hidden" width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g stroke="#FFFFFF" stroke-linecap="square">
+                        <path d="M1,1 L20,20"></path>
+                        <g transform="translate(10.000000, 10.000000) rotate(-90.000000) translate(-10.000000, -10.000000) ">
+                            <path d="M0,1 L19,20"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
         </a>
 
         <nav id="main-menu">
-            <ul>
+            <ul class="hidden">
                 <li><a href="#">Works</a></li>
                 <li><a href="#">About & contact</a></li>
                 <nav>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul id="socials-nav">
+                        <li>
+                            <a href="https://twitter.com/fczls">
+                                <i class="icon-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.behance.net/fczls">
+                                <i class="icon-behance"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://fr.pinterest.com/fczls/">
+                                <i class="icon-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://fr.linkedin.com/pub/fabien-cazals/55/27/172">
+                                <i class="icon-linkedin"></i>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </ul>

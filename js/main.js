@@ -5,38 +5,82 @@
 	var winWidth   = $(window).width();
 
 	//Resize SVG
-	$(".svg-shape").width(winWidth);
-	$(".svg-shape").height(winHeight);
+
+		function resizeHomeSVG(){
+			winHeight = $(window).height();
+			winWidth  = $(window).width();
+			$(".svg-shape").width(winWidth);
+			$(".svg-shape").height(winHeight);
+		};
+
+		//Init
+		resizeHomeSVG();
+		//OnResize
+		$(window).resize(function(){
+			resizeHomeSVG();
+		});
 
 	//Resize every "screen"
-	$(".content-zone").height(winHeight);
-	//TODO: onresize
 
-	//Centrage vertical home
-	var boxHeight  = $("#center-presentation").height();
-	var boxWidth   = $("#center-presentation").width();
-	var marginTop  = (winHeight/2) - (boxHeight/2);
-	var marginLeft = (winWidth/2)  - (boxWidth/2);
-	$("#center-presentation").css({
-		"top":  marginTop,
-		"left": marginLeft
-	});
+		//Init
+		$(".content-zone").height(winHeight);
+		//OnResize
+		$(window).resize(function() {
+			winHeight = $(window).height();
+			winWidth  = $(window).width();
+			$(".content-zone").height(winHeight);
+		});
+
+	//Centrage vertical Home text block
+
+		function initHometextblock() {
+			winHeight = $(window).height();
+			winWidth  = $(window).width();
+			boxHeight  = $("#center-presentation").height();
+			boxWidth   = $("#center-presentation").width();
+			marginTop  = (winHeight/2) - (boxHeight/2);
+			marginLeft = (winWidth/2)  - (boxWidth/2);
+			$("#center-presentation").css({
+				"top":  marginTop,
+				"left": marginLeft
+			});
+		}
+
+		//Init
+		initHometextblock();
+		//OnResize
+		$(window).resize(function(){
+			initHometextblock();
+		});
 
 	//Menu
 	$('#reveal-menu').on('click', function(e){
 		e.preventDefault();
-		$menu = $("#main-menu");
-		console.log($menu.height());
+
+		$menu      = $("#main-menu");
+		$menuopen  = $("#menu-ico");
+		$menuclose = $("#menu-close-ico");
+
 		$menu.slideToggle(
-			function(){
-				$menu.animate({
-					"height": "0"
-				}, 150);
-			},
-			function(){
-				$menu.animate({
-					"height": "100px"
-				}, 150);
+			{
+				complete: function(){
+					if ($menu.is(":hidden")) {
+						$menuopen.removeClass("hidden").addClass("shown");
+						$menuclose.removeClass("shown").addClass("hidden");
+
+					} else {
+						$menuclose.removeClass("hidden").addClass("shown");
+						$menuopen.removeClass("shown").addClass("hidden");
+					}
+					$menu.animate(
+						{
+							"height": "100px"
+						},
+						150, function (){
+							$("#main-menu > ul").fadeToggle(150);
+						}
+					);
+				}
 			}
 		);
 	});

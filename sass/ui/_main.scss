@@ -4,14 +4,25 @@ html, body {
 
 a { text-decoration: none; }
 
-.show {
+.show
+{
 	-webkit-transition: opacity 0.5s;
 	opacity: 1;
 }
 
-.hide {
+.hide
+{
 	-webkit-transition: opacity 0.5s;
 	opacity: 0;
+}
+
+.hidden
+{
+	display: none;
+}
+.shown
+{
+	display: block;
 }
 
 .content-zone {
