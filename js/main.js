@@ -67,10 +67,16 @@
 					if ($menu.is(":hidden")) {
 						$menuopen.removeClass("hidden").addClass("shown");
 						$menuclose.removeClass("shown").addClass("hidden");
+						$('#reveal-menu').css({
+							backgroundSize: "100% auto"
+						});
 
 					} else {
 						$menuclose.removeClass("hidden").addClass("shown");
 						$menuopen.removeClass("shown").addClass("hidden");
+						$('#reveal-menu').css({
+							backgroundSize: "0%"
+						});
 					}
 					$menu.animate(
 						{
@@ -83,6 +89,22 @@
 				}
 			}
 		);
+
+		//Page About
+		if($("#about").css('display') !== 'none'){
+			$("#about *").fadeOut(function(){
+				$("#about").slideUp();
+			});
+		}
+	});
+
+	//Contact - About
+	$("#about-btn").on("click", function(){
+		$("#about").slideDown(600, function(){
+			$("body").css({
+				overflowY: 'hidden'
+			});
+		});
 	});
 
 }());

@@ -77,10 +77,12 @@
 		// svgs.forEach( function( el, i ) {
 		// 	el.setAttribute( 'class', el.getAttribute('class') + ' hide' );
 		// } );
-		hidden.forEach( function( el, i ) {
-			classie.remove( el, 'hide' );
-			classie.add( el, 'show' );
-		} );
+		$("#hello").fadeOut(500, function(){
+			hidden.forEach( function( el, i ) {
+				classie.remove( el, 'hide' );
+				classie.add( el, 'show' );
+			} );
+		});
 	}
 
 	init();

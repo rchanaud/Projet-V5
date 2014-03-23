@@ -2,8 +2,15 @@
 {
 	z-index: 99;
 	position: fixed;
-	top: 45px;
-	left: 40px;
+	top: 28px;
+	left: 28px;
+	width: 50px;
+	height: 50px;
+	background-image: url("../img/losange.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
+	transition: background-size .15s ease-in-out;
 }
 
 #menu-ico
@@ -70,6 +77,7 @@
 		{
 			display: block;
 			position: relative;
+			opacity: .35;
 			transition: opacity .15s ease-in-out;
 			i
 			{
@@ -78,7 +86,7 @@
 			}
 			&:hover
 			{
-				opacity: .35;
+				opacity: 1;
 				transition: opacity .15s ease-in-out;
 			}
 		}

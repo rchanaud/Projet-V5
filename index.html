@@ -25,29 +25,15 @@
 
         <!-- MENU -->
         <a id="reveal-menu" href="#">
-            <svg id="menu-ico" class="shown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                <g stroke="#1a1a1a" stroke-linecap="square">
-                    <path d="M0.5,1.5 L20.5,1.5"   ></path>
-                    <path d="M0.5,11.5 L20.5,11.5" ></path>
-                    <path d="M0.5,21.5 L20.5,21.5" ></path>
-                </g>
-            </svg>
-            <svg id="menu-close-ico" class="hidden" width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g stroke="#FFFFFF" stroke-linecap="square">
-                        <path d="M1,1 L20,20"></path>
-                        <g transform="translate(10.000000, 10.000000) rotate(-90.000000) translate(-10.000000, -10.000000) ">
-                            <path d="M0,1 L19,20"></path>
-                        </g>
-                    </g>
-                </g>
-            </svg>
+            <button type="button" role="button" aria-label="Toggle Navigation" class="lines-button x2">
+                <span class="lines"></span>
+            </button>
         </a>
 
         <nav id="main-menu">
             <ul class="hidden">
                 <li><a href="#">Works</a></li>
-                <li><a href="#">About & contact</a></li>
+                <li><a href="#" id="about-btn">About & contact</a></li>
                 <nav>
                     <ul id="socials-nav">
                         <li>
@@ -76,7 +62,35 @@
         </nav>
         <!-- /MENU -->
         
-        <div id="accueil" class="content-zone">
+        <!-- ABOUT -->
+        <div id="about">
+            <div id="about-zone1">
+                <div>
+                    <span>Hey, i'm Fabien</span>
+                    <span>Freelance UI/UX Designer</span>
+                    <p>I live in Paris and I am an HETIC student. I have been crafting webdesigns for 2 years, with particular attention to details and trying to build great & global user experiences.</p>
+                    <p>I’m looking for a 6 months internship from 2 June to 13 December, and a work experience contract for the following year.</p>
+                    <div class="button-codrops">
+                        <a href="#" data-hover="See my resume">
+                            <span>See my resume</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="about-zone2">
+                <span>Contact</span>
+                <form action="">
+                    <input type="text" value="Name"  required>
+                    <input type="text" value="Email" required>
+                    <textarea name="" id="" cols="30" rows="10" required>Message
+                    </textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+        <!-- /ABOUT -->
+
+        <div id="accueil">
             
             <!-- Middle polygon -->
             <svg class="line-drawing svg-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1423.9 800">
@@ -149,12 +163,14 @@
             <!-- /Diagonals lines -->
             
             <!-- Polygon text -->
-            <div id="center-presentation" class="hide">
-                <span>Hi there,</span>
-                <span>I'm Fabien</span>
-                <span>I design web & mobile apps</span>
-                <p>Also, i'm looking for a 6 months internship.</p>
-                <a href="mailto:">Are you interested ?</a>
+            <div id="center-presentation">
+                <span id="hello">Hello.</span>
+                <div id="imfabien" class="hide">
+                    <span>I'm Fabien</span>
+                    <span>Freelance UI & UX designer</span>
+                    <p>Also, i'm looking for a 6 months internship.</p>
+                    <a href="mailto:">Are you interested ?</a>
+                </div>
             </div>
             <!-- /Polygon text -->
 
@@ -174,6 +190,24 @@
 
         <script src="js/classie.js"></script>
         <script src="js/svganimations2.js"></script>
+          <script>
+    var anchor = document.querySelectorAll('button');
+    
+    [].forEach.call(anchor, function(anchor){
+      var open = false;
+      anchor.onclick = function(event){
+        event.preventDefault();
+        if(!open){
+          this.classList.add('close');
+          open = true;
+        }
+        else{
+          this.classList.remove('close');
+          open = false;
+        }
+      }
+    }); 
+  </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
