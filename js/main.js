@@ -101,8 +101,10 @@
 	//Contact - About
 	$("#about-btn").on("click", function(){
 		$("#about").slideDown(600, function(){
-			$("body").css({
-				overflowY: 'hidden'
+			$("#about *").fadeIn(150, function(){
+				$("body").css({
+					overflowY: 'hidden'
+				});
 			});
 		});
 	});
