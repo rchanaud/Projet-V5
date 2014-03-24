@@ -76,7 +76,7 @@
         <div id="about">
             <div id="about-zone1">
                 <div>
-                    <span>Hey, i'm Fabien</span>
+                    <span>I'm Fabien</span>
                     <span>Freelance UI/UX Designer</span>
                     <p>I live in Paris and I am an HETIC student. I have been crafting webdesigns for 2 years, with particular attention to details and trying to build great & global user experiences.</p>
                     <p>I’m looking for a 6 months internship from 2 June to 13 December, and a work experience contract for the following year.</p>
@@ -195,29 +195,30 @@
         <!-- JS -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script type="text/javascript" src="./js/vendor/fuckingie.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
         <script src="js/classie.js"></script>
         <script src="js/svganimations2.js"></script>
-          <script>
-    var anchor = document.querySelectorAll('button');
-    
-    [].forEach.call(anchor, function(anchor){
-      var open = false;
-      anchor.onclick = function(event){
-        event.preventDefault();
-        if(!open){
-          this.classList.add('close');
-          open = true;
-        }
-        else{
-          this.classList.remove('close');
-          open = false;
-        }
-      }
-    }); 
-  </script>
+        <script>
+            var anchor = document.querySelectorAll('button');
+            
+            [].forEach.call(anchor, function(anchor){
+              var open = false;
+              anchor.onclick = function(event){
+                event.preventDefault();
+                if(!open){
+                  this.classList.add('close');
+                  open = true;
+                }
+                else{
+                  this.classList.remove('close');
+                  open = false;
+                }
+              }
+            }); 
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

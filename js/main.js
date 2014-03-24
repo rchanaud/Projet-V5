@@ -92,8 +92,10 @@
 
 		//Page About
 		if($("#about").css('display') !== 'none'){
-			$("#about *").fadeOut(function(){
-				$("#about").slideUp();
+			$("#about *").fadeOut(150);
+			$("#about").slideUp(600);
+			$("body").css({
+				overflowY: 'auto'
 			});
 		}
 	});
@@ -101,10 +103,9 @@
 	//Contact - About
 	$("#about-btn").on("click", function(){
 		$("#about").slideDown(600, function(){
-			$("#about *").fadeIn(150, function(){
-				$("body").css({
-					overflowY: 'hidden'
-				});
+			$("#about *").fadeIn(150);
+			$("body").css({
+				overflowY: 'hidden'
 			});
 		});
 	});
